@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --white:#fff;
+}
+
+*{
+    font-family:'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+*::selection{
+    background: var(--white);
+}
+html{
+    font-size:61.5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--white);
+}
+body{
+    background:#fff;
+    overflow-x: hidden;
+}
+header {
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.5rem solid var(--white);
+}
+header .user .name{
+    font-size: 3.5rem;
+    color: antiquewhite;
+}
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+header .navbar{
+    width: 100%;
+}
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #222;
+    color: antiquewhite;
+    font-size: 2rem;
+    border-radius: 5rem;
+    border: 0.1rem solid var(--white);
+}
+header .navbar ul li a:hover{
+    background: yellowgreen;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 30rem;
+    background-color:darkslategray;
+}
+.main-content{
+    width: auto;
+    align-items: center;
+    padding: 50px 50px 55px;
+    background: azure;
+    border-radius: 10px;
+    color: #222;
+}
+.main-content h2{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom:20px;
+}
+.main-content .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.input-box .input-field{
+    position: relative;
+    width: 48%;
+    height: 50%;
+    background:burlywood;
+    margin: 13px 0;
+}
+.input-box .input-field input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:2px solid black;
+    outline: none;
+    font-size:16px;
+    color: #fff;
+    border-radius: 6px;
+    padding: 15px 15px 15px 40px;
+}
+.input-box .input-field input::placeholder{
+    color: #eee;
+}
+.input-box .input-field i{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.main-content .btn{
+    width: 40%;
+    height: 40px;
+    background: #eee;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1) ;
+    cursor: pointer;
+    font-size: 16px;
+    color: #222;
+    font-weight: 600;
+    margin:20px;
+    border: 1px solid black;
+}
+.main-content .btn:hover{
+    background-color: aqua;   
+}
+@media screen and (max-width: 768px) {
+    header .user img {
+        flex-direction: column;
+    }
+    header .navbar{
+        width: 100%;
+        margin:10px 20px;
+    }
+
+    .main-content {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-content {
+        padding: 50px;
+    }
+
+    .input-box .input-field input[type="text"],
+    .form-group .input-field input[type="email"],
+    .form-group .input-field input[type="file"] {
+        padding: 8px;
+    }
+
+    .main-content button[type="submit"] {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Courses Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+       <!-- <link rel="stylesheet" href="./Style/style.css">-->
+        
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --white:#fff;
+}
+
+*{
+    font-family:'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+*::selection{
+    background: var(--white);
+}
+html{
+    font-size:61.5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--white);
+}
+body{
+    background:#fff;
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.5rem solid var(--white);
+}
+header .user .name{
+    font-size: 3.5rem;
+    color: antiquewhite;
+}
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+header .navbar{
+    width: 100%;
+}
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #222;
+    color: antiquewhite;
+    font-size: 2rem;
+    border-radius: 5rem;
+    border: 0.1rem solid var(--white);
+}
+header .navbar ul li a:hover{
+    background: yellowgreen;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    margin-left: 35rem;
+    background-color:darkslategray;
+}
+ .main-content {
+        flex: 3;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .main-content h2 {
+        color:rgb(114, 9, 9);
+        margin-bottom: 20px;
+        margin-left: 350px;
+        font-size: 25px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .course{
+        display: flex;
+        background-color: #fff;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .courses img{
+        width: 200px;
+        height: auto;
+        margin-right: 1rem;
+        border-radius: 5px;
+        padding: 10px 12px;
+    }
+    .courses-detail{
+        flex-grow: 1;
+        margin-left: 12px;
+    }
+    .courses-detail h3{
+        margin-top: 0;
+        color: black;
+        font-size: 20px;
+    }
+    .courses-detail p{
+        margin: 0.5rem 0;
+        font-size: 15px;
+    }
+
+
+    button {
+        background-color: #18bc9c;
+        color:black;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 1px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color:darkred;
+    }
+    @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    }
+    @media (max-width: 480px){
+         .main-content{
+            padding: 20px;
+    }
+    .input-box input[type="text"],
+    .input-box textarea{
+        padding: 7px 15px;
+        font-size: 14px;
+    }
+}
+    </style>
+
+    <body>
+        <header>
+
+            <div class="user">
+                <img src="./Images/image 2.jpg" alt="">
+                <h3 class="name">Anderson</h3>
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#my courses">My Courses</a></li>
+                    <li><a href="#password">Password</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#logout">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <h2>My Enrolled Courses</h2>
+            <div class="courses">
+                <img src="./Images/agile.jpg">
+                <div class="courses-detail">
+                    <h3> Learn Java Fullstack</h3>
+                    <p> Java is a evergreen course where we get more knowledge about Java Programming Language.</p>
+                    <p>Duration: 3 Months</p>
+                    <p>Guider: Arosha</p>
+                    <p>Price: $50.00</p>
+                    <button>Watch Course</button>
+                </div>
+            </div>
+            <div class="courses">
+                <img src="./Images/dataanalyst.jpg">
+                <div class="courses-detail">
+                    <h3> Learn Data Analyst</h3>
+                    <p>Learn Data Analyst which is growing fast in the platform of Artificial Intelligence.</p>
+                    <p>Duration: 3 Months</p>
+                    <p>Guider: Arosha</p>
+                    <p>Price: $50.00</p>
+                    <button>Watch Course</button>
+                </div>
+            </div>
+        </div>
+       
+    </body>
+</html>
